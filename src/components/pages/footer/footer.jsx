@@ -4,7 +4,7 @@ function Footer() {
     <footer className="footer">
     <div className="footer-content">
       <p>
-        &copy; {new Date().getFullYear()} Fun with Harry Potter. Todos los derechos
+        &copy; 2024 Get fun with Harry Potter. Todos los derechos
         reservados.
       </p>
     </div>
