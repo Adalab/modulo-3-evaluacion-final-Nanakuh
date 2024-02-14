@@ -1,6 +1,6 @@
-import { useState } from "react";
+//import { useState } from "react";
 
-import '../scss/App.scss'
+//import '../scss/App.scss'
 
 import CharacterList from './components/characterList';
 import Form from './components/pages/form/form';

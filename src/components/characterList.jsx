@@ -1,4 +1,4 @@
-import Item from "./item";
+//import Item from "./item";
 import { PropTypes } from "prop-types";
 
 function CharacterList({ flowers }) {
