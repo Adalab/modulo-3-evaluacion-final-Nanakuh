@@ -3,6 +3,7 @@ import "./home.css";
 import Card from "../../card/card";
 import NameFilter from "../../name-filter/name-filter";
 import SelectFilter from "../../select-filter/select-filter";
+import Header from "../../header/header";
 
 function Home() {
   // Estados
@@ -41,7 +42,8 @@ function Home() {
 
   return (
     <div className="App">
-      <h1>Harry Potter Characters</h1>
+
+     <Header />
       <div className="filter-section">
        <NameFilter handleFilterChange={handleNameFilterChange}/>
        <SelectFilter selectedHouse={houseFilter} onHouseChange={handleHouseFilterChange}/>
@@ -60,7 +62,7 @@ function Home() {
               />
             ))
           ) : (
-            <p>No characters found.</p> // Maneja el caso de no encontrar personajes
+            <p>No characters found {textFilter}.</p> // Maneja el caso de no encontrar personajes
           )}
         </div>
       )}

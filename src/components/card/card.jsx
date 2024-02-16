@@ -1,10 +1,12 @@
 import PropTypes from "prop-types";
 import "./card.css";
+import { Link } from "react-router-dom";
 
 function Card({ id,image, name, species }) {
   const defaultImage = "../../../anonimo.webp";
 
   return (
+    <Link to={`/character/${id}`}>
     <div className="card" key={id}>
       <img src={image || defaultImage} alt={name} className="card-image" />
       <div className="card-info">
@@ -12,6 +14,7 @@ function Card({ id,image, name, species }) {
         <p className="card-species">Especie: {species}</p>
       </div>
     </div>
+    </Link>
   );
 }
 
@@ -19,16 +22,7 @@ Card.propTypes = {
   id:PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  species: PropTypes.string.isRequired,
-  gender: PropTypes.string,
-  house: PropTypes.string,
-  dateOfBirth: PropTypes.string,
-  wizard: PropTypes.bool,
-  eyeColour: PropTypes.string,
-  hairColour: PropTypes.string,
-  patronus: PropTypes.string,
-  alive: PropTypes.bool,
-  actor: PropTypes.string,
+  species: PropTypes.string.isRequired,  
 };
 
 export default Card;
