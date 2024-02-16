@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import "./home.css";
 import Card from "../../card/card";
+import NameFilter from "../../name-filter/name-filter";
 
 function Home() {
   // Estados
   const [characters, setCharacters] = useState([]); 
-  const [filter, setFilter] = useState("");
+  const [textFilter, setTextFilter] = useState("");
 
   
   const fetchCharacters = () => {
@@ -25,24 +26,19 @@ function Home() {
   }, []); // Dependencias vacías para ejecutar solo en el montaje
 
   const handleFilterChange = (e) => {
-    setFilter(e.target.value.toLowerCase());
+    setTextFilter(e.target.value.toLowerCase());
   };
 
   // Filtrado de personajes. Esta lógica ya maneja correctamente los arrays vacíos.
   const filteredCharacters = characters.filter((character) =>
-    character.name.toLowerCase().includes(filter)
+    character.name.toLowerCase().includes(textFilter)
   );
 
   return (
     <div className="App">
       <h1>Harry Potter Characters</h1>
       <div className="filter-section">
-        <input
-          type="text"
-          placeholder="Filter by name..."
-          onChange={handleFilterChange}
-          className="filter-input"
-        />
+       <NameFilter handleFilterChange={handleFilterChange}/>
       </div>
       {characters.length === 0 ? (
         <p>Loading characters...</p>
@@ -50,8 +46,8 @@ function Home() {
         <div className="character-list">
           {filteredCharacters.length > 0 ? (
             filteredCharacters.map((character) => (
-              <Card
-                key={character.name}
+              <Card id={character.id}
+                key={character.id}
                 image={character.image}
                 name={character.name}
                 species={character.species}
