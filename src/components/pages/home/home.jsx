@@ -2,15 +2,17 @@ import { useState, useEffect } from "react";
 import "./home.css";
 import Card from "../../card/card";
 import NameFilter from "../../name-filter/name-filter";
+import SelectFilter from "../../select-filter/select-filter";
 
 function Home() {
   // Estados
   const [characters, setCharacters] = useState([]); 
   const [textFilter, setTextFilter] = useState("");
+  const [houseFilter,setHouseFilter] = useState("gryffindor");
 
   
   const fetchCharacters = () => {
-    fetch("https://hp-api.onrender.com/api/characters")
+    fetch(`https://hp-api.onrender.com/api/characters/house/${houseFilter}`)
       .then((response) => response.json())
 
       .then((dataResponse) => {
@@ -23,10 +25,13 @@ function Home() {
 
   useEffect(() => {
     fetchCharacters();
-  }, []); // Dependencias vacías para ejecutar solo en el montaje
+  }, [characters]); // Dependencias vacías para ejecutar solo en el montaje
 
-  const handleFilterChange = (e) => {
+  const handleNameFilterChange = (e) => {
     setTextFilter(e.target.value.toLowerCase());
+  };
+  const handleHouseFilterChange = (e) => {
+    setHouseFilter(e.target.value.toLowerCase());
   };
 
   // Filtrado de personajes. Esta lógica ya maneja correctamente los arrays vacíos.
@@ -38,7 +43,8 @@ function Home() {
     <div className="App">
       <h1>Harry Potter Characters</h1>
       <div className="filter-section">
-       <NameFilter handleFilterChange={handleFilterChange}/>
+       <NameFilter handleFilterChange={handleNameFilterChange}/>
+       <SelectFilter selectedHouse={houseFilter} onHouseChange={handleHouseFilterChange}/>
       </div>
       {characters.length === 0 ? (
         <p>Loading characters...</p>
