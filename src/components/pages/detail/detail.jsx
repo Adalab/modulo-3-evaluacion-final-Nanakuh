@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./detail.css";
 
+
 function Detail() {
   const { id } = useParams();
 
@@ -25,7 +26,7 @@ function Detail() {
     <div className="character-detail">
       <div className="character-header">
         <img
-          src={`../../../../${character.house}.jpg`}
+          src={`./${character.house}.jpg`}
           alt="Hogwarts Logo"
           className="hogwarts-logo"
         />

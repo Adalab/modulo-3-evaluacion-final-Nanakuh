@@ -3,7 +3,7 @@ import "./card.css";
 import { Link } from "react-router-dom";
 
 function Card({ id,image, name, species }) {
-  const defaultImage = "../../../anonimo.webp";
+  const defaultImage = "./anonimo.webp";
 
   return (
     <Link to={`/character/${id}`}>

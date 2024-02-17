@@ -6,7 +6,7 @@ import SelectFilter from "../../select-filter/select-filter";
 import Header from "../../header/header";
 
 function Home() {
-  // Estados
+  
   const [characters, setCharacters] = useState([]); 
   const [textFilter, setTextFilter] = useState("");
   const [houseFilter,setHouseFilter] = useState("gryffindor");
@@ -26,7 +26,7 @@ function Home() {
 
   useEffect(() => {
     fetchCharacters();
-  }, [characters]); // Dependencias vacías para ejecutar solo en el montaje
+  }, [characters]); 
 
   const handleNameFilterChange = (e) => {
     setTextFilter(e.target.value.toLowerCase());
@@ -35,7 +35,7 @@ function Home() {
     setHouseFilter(e.target.value.toLowerCase());
   };
 
-  // Filtrado de personajes. Esta lógica ya maneja correctamente los arrays vacíos.
+  // Filtrado de personajes
   const filteredCharacters = characters.filter((character) =>
     character.name.toLowerCase().includes(textFilter)
   );
@@ -62,7 +62,7 @@ function Home() {
               />
             ))
           ) : (
-            <p>No characters found {textFilter}.</p> // Maneja el caso de no encontrar personajes
+            <p>There is no character that matches {textFilter}.</p>
           )}
         </div>
       )}
