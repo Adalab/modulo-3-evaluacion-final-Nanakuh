@@ -1,10 +1,9 @@
 .app-header {
   width: 100%;
-  height: 500px; 
+  height: 100px; 
   background-image: url('../klipartz.com.jpg'); 
   background-size: cover;
   background-position: center;
-  color: grey; 
   display: flex;
   justify-content: center;
   align-items: center;

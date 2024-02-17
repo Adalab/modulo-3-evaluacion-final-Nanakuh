@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./detail.css";
 
 function Detail() {
@@ -24,6 +24,7 @@ function Detail() {
 
   return (
     <div className="character-detail">
+      <Link to="/home"className="return-button">Volver</Link>
       <div className="character-header">
         <img
           src={`./${character.house}.jpg`}
