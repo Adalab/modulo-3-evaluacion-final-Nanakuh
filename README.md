@@ -4,9 +4,14 @@ You can find this web application hosted on GitHub Pages at the following addres
 
 👉 http://beta.adalab.es/modulo-3-evaluacion-final-Nanakuh/
 
+
+
 How to Use:
 
-Clone this repository.
+Clone this repository on your local machine using the following command:
+
+git@github.com:Adalab/modulo-3-evaluacion-final-Nanakuh.git
+
 
 Install the dependencies: npm install.
 
@@ -15,5 +20,11 @@ Launch the project in development mode: npm run dev.
 Search and get fun until know all about your favorites characters. I hope you find this README useful.
 
 If you have any suggestion, please, contact me.🙂
+email: anagilrodrig@gmail.com
+linkedin: https://www.linkedin.com/in/ana-maria-gil-rod/
+github: https://github.com/Nanakuh
+
+
+
 
 Authors @Nanakuh
