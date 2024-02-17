@@ -10,7 +10,7 @@ How to Use:
 
 Clone this repository on your local machine using the following command:
 
-git@github.com:Adalab/modulo-3-evaluacion-final-Nanakuh.git
+https://github.com/Adalab/modulo-3-evaluacion-final-Nanakuh.git
 
 
 Install the dependencies: npm install.
