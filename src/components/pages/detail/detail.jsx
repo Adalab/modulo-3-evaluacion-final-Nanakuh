@@ -80,9 +80,10 @@ function Detail() {
           <strong>Actor:</strong> {character.actor}
         </p>
         <p>
-        <strong>Vivo:</strong> {character.alive ? <><img src={aliveIcon} alt="alive"/> Sí</> : <img src={deadIcon} alt="dead"/> No</>}        
+        <strong>Vivo:</strong> {character.alive ? <><img src={aliveIcon} alt="alive"/> Sí</> : <><img src={deadIcon} alt="dead"/> No</>}        
         </p> 
-      </div>
+      </div> 
+    </div>
   );
 }
 
