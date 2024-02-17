@@ -1,75 +1,64 @@
 .character-detail {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px auto;
-  padding: 20px;
   max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
   border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e0e0e0;
-  position: relative;
-}
-
-.character-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  right: 0;
-  padding: 10px;
-}
-
-.hogwarts-logo {
-  width: 50px;
-  height: auto;
-  margin-right: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .return-button {
-  padding: 5px 10px;
-  cursor: pointer;
-  background-color: #f1f1f1;
-  border: 1px solid #d4d4d4;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: #05646f;
+  color: #fff;
+  text-decoration: none;
   border-radius: 4px;
-  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.return-button:hover {
+  background-color: #05646f;
+}
+
+.character-header {
+  text-align: center;
+}
+
+.hogwarts-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
 }
 
 .character-image {
-  width: 80%;
-  max-width: 300px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-top: 40px; /* Espacio para el encabezado con el logo y botón */
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  border-radius: 4px;
 }
 
 .character-info {
-  text-align: center;
-  width: 100%;
   margin-top: 20px;
 }
 
 .character-info h2 {
-  color: #333;
-  margin: 10px 0;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .character-info p {
-  margin: 5px 0;
-  color: #666;
-  line-height: 1.6;
+  font-size: 16px;
+  margin-bottom: 8px;
 }
 
-@media (min-width: 768px) {
-  .character-detail {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .character-info {
-    margin-left: 20px;
-    text-align: left;
-  }
+.character-info p strong {
+  font-weight: bold;
+  margin-right: 5px;
 }
+
+.character-info p:last-child {
+  margin-bottom: 0;
+}
+

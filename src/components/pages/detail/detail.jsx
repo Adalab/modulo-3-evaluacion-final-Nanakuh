@@ -5,6 +5,8 @@ import "./detail.css";
 function Detail() {
   const { id } = useParams();
   const defaultImage = "./anonimo.webp";
+  const deadIcon = "./dead.png";
+  const aliveIcon = "./alive.png";
 
   const [character, setCharacter] = useState({});
 
@@ -24,7 +26,7 @@ function Detail() {
 
   return (
     <div className="character-detail">
-      <Link to="/" className="return-button">Volver</Link>
+      <Link to="/" className="return-button">VOLVER</Link>
       <div className="character-header">
         <img
           src={`./${character.house}.jpg`}
@@ -78,10 +80,9 @@ function Detail() {
           <strong>Actor:</strong> {character.actor}
         </p>
         <p>
-          <strong>Vivo:</strong> {character.alive ? "Sí" : "No"}
-        </p>
+        <strong>Vivo:</strong> {character.alive ? <><img src={aliveIcon} alt="alive"/> Sí</> : <img src={deadIcon} alt="dead"/> No</>}        
+        </p> 
       </div>
-    </div>
   );
 }
 
