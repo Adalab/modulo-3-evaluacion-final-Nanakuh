@@ -24,7 +24,7 @@ function Detail() {
 
   return (
     <div className="character-detail">
-      <Link to="/home"className="return-button">Volver</Link>
+      <Link to="/" className="return-button">Volver</Link>
       <div className="character-header">
         <img
           src={`./${character.house}.jpg`}

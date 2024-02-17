@@ -6,7 +6,7 @@ function Card({ id, image, name, species }) {
   const defaultImage = "./anonimo.webp";
 
   return (
-    <Link to={`/character/${id}`}>
+    <Link to={`/character/${id}`} className="card-link">
       <div className="card" key={id}>
         <img src={image || defaultImage} alt={name} className="card-image" />
         <div className="card-info">

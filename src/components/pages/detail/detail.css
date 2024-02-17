@@ -7,7 +7,7 @@
   max-width: 800px;
   border-radius: 8px;
   background: #fff;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: 1px solid #e0e0e0;
   position: relative;
 }
@@ -16,7 +16,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  position: absolute;
+  position: sticky;
   top: 0;
   right: 0;
   padding: 10px;
@@ -35,14 +35,13 @@
   border: 1px solid #d4d4d4;
   border-radius: 4px;
   font-size: 16px;
-
 }
 
 .character-image {
   width: 80%;
   max-width: 300px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-top: 40px; /* Espacio para el encabezado con el logo y botón */
 }
 
