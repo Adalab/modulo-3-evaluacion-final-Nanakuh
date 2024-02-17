@@ -20,11 +20,12 @@ Launch the project in development mode: npm run dev.
 Search and get fun until know all about your favorites characters. I hope you find this README useful.
 
 If you have any suggestion, please, contact me.🙂
+
 email: anagilrodrig@gmail.com
+
 linkedin: https://www.linkedin.com/in/ana-maria-gil-rod/
+
 github: https://github.com/Nanakuh
-
-
 
 
 Authors @Nanakuh
