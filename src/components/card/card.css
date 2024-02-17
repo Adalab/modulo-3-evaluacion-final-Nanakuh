@@ -4,11 +4,14 @@
   overflow: hidden;
   margin: 10px;
   width: 200px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+ 
   
 }
 .card-link{
-  text-decoration: none;
+  text-decoration: none;  
+  background-color: #05646f;
+  margin: 5px;
+
 }
 .card-image {
   width: 100%;
@@ -18,14 +21,16 @@
 
 .card-info {
   padding: 10px;
+  background-color: rgb(243, 209, 185);
 }
 
 .card-name {
   margin: 10px 0 5px;
-  font-size: 18px;  
+  font-size: 18px; 
+  color: #05646f
 }
 
 .card-species {
   font-size: 16px;
-  color: #666;
+  color: #1693a1;
 }

@@ -42,45 +42,45 @@ function Detail() {
       <div className="character-info">
         <h2>{character.name}</h2>
         <p>
-          <strong>Especie:</strong> {character.species}
+          <strong className="title">Especie:</strong> {character.species}
         </p>
         <p>
-          <strong>Género:</strong> {character.gender}
+          <strong className="title">Género:</strong> {character.gender}
         </p>
         <p>
-          <strong>Casa:</strong> {character.house}
+          <strong className="title">Casa:</strong> {character.house}
         </p>
         <p>
-          <strong>Fecha de Nacimiento:</strong> {character.dateOfBirth}
+          <strong className="title">Fecha de Nacimiento:</strong> {character.dateOfBirth}
         </p>
         <p>
-          <strong>Mago:</strong> {character.wizard ? "Sí" : "No"}
+          <strong className="title">Mago:</strong> {character.wizard ? "Sí" : "No"}
         </p>
         <p>
-          <strong>Ancestry:</strong> {character.ancestry}
+          <strong className="title">Ancestry:</strong> {character.ancestry}
         </p>
         <p>
-          <strong>Color de Ojos:</strong> {character.eyeColour}
+          <strong className="title">Color de Ojos:</strong> {character.eyeColour}
         </p>
         <p>
-          <strong>Color de Cabello:</strong> {character.hairColour}
+          <strong className="title">Color de Cabello:</strong> {character.hairColour}
         </p>
         <p>
-          <strong>Patronus:</strong> {character.patronus}
+          <strong className="title">Patronus:</strong> {character.patronus}
         </p>
         <p>
-          <strong>Estudiante de Hogwarts:</strong>{" "}
+          <strong className="title">Estudiante de Hogwarts:</strong>{" "}
           {character.hogwartsStudent ? "Sí" : "No"}
         </p>
         <p>
-          <strong>Staff de Hogwarts:</strong>{" "}
+          <strong className="title">Staff de Hogwarts:</strong>{" "}
           {character.hogwartsStaff ? "Sí" : "No"}
         </p>
         <p>
-          <strong>Actor:</strong> {character.actor}
+          <strong className="title">Actor:</strong> {character.actor}
         </p>
         <p>
-        <strong>Vivo:</strong> {character.alive ? <><img src={aliveIcon} alt="alive"/> Sí</> : <><img src={deadIcon} alt="dead"/> No</>}        
+        <strong className="title">Vivo:</strong> {character.alive ? <><img src={aliveIcon} alt="alive"/> Sí</> : <><img src={deadIcon} alt="dead"/> No</>}        
         </p> 
       </div> 
     </div>
