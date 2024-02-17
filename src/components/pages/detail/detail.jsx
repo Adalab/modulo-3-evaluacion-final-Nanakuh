@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./detail.css";
 
-
 function Detail() {
   const { id } = useParams();
+  const defaultImage = "./anonimo.webp";
 
   const [character, setCharacter] = useState({});
 
@@ -32,7 +32,7 @@ function Detail() {
         />
       </div>
       <img
-        src={character.image}
+        src={character.image || defaultImage}
         alt={character.name}
         className="character-image"
       />

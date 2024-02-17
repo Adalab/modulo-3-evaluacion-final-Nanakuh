@@ -4,29 +4,26 @@ import Card from "../../card/card";
 import NameFilter from "../../name-filter/name-filter";
 import SelectFilter from "../../select-filter/select-filter";
 import Header from "../../header/header";
+import Footer from "../../footer/footer";
 
 function Home() {
-  
-  const [characters, setCharacters] = useState([]); 
+  const [characters, setCharacters] = useState([]);
   const [textFilter, setTextFilter] = useState("");
-  const [houseFilter,setHouseFilter] = useState("gryffindor");
+  const [houseFilter, setHouseFilter] = useState("gryffindor");
 
-  
   const fetchCharacters = () => {
     fetch(`https://hp-api.onrender.com/api/characters/house/${houseFilter}`)
       .then((response) => response.json())
 
       .then((dataResponse) => {
-        
         setCharacters(dataResponse);
-
       })
-      .catch (error => console.error("Error fetching data: ", error))
-    }
+      .catch((error) => console.error("Error fetching data: ", error));
+  };
 
   useEffect(() => {
     fetchCharacters();
-  }, [characters]); 
+  }, [characters]);
 
   const handleNameFilterChange = (e) => {
     setTextFilter(e.target.value.toLowerCase());
@@ -42,11 +39,13 @@ function Home() {
 
   return (
     <div className="App">
-
-     <Header />
+      <Header />
       <div className="filter-section">
-       <NameFilter handleFilterChange={handleNameFilterChange}/>
-       <SelectFilter selectedHouse={houseFilter} onHouseChange={handleHouseFilterChange}/>
+        <NameFilter handleFilterChange={handleNameFilterChange} />
+        <SelectFilter
+          selectedHouse={houseFilter}
+          onHouseChange={handleHouseFilterChange}
+        />
       </div>
       {characters.length === 0 ? (
         <p>Loading characters...</p>
@@ -54,7 +53,8 @@ function Home() {
         <div className="character-list">
           {filteredCharacters.length > 0 ? (
             filteredCharacters.map((character) => (
-              <Card id={character.id}
+              <Card
+                id={character.id}
                 key={character.id}
                 image={character.image}
                 name={character.name}
@@ -66,6 +66,7 @@ function Home() {
           )}
         </div>
       )}
+      <Footer />
     </div>
   );
 }
