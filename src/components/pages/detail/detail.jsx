@@ -26,7 +26,7 @@ function Detail() {
 
   return (
     <div className="character-detail">
-      <Link to="/" className="return-button">VOLVER</Link>
+      <Link to="/" className="return-button">BACK</Link>
       <div className="character-header">
         <img
           src={`./${character.house}.jpg`}
@@ -41,47 +41,42 @@ function Detail() {
       />
       <div className="character-info">
         <h2>{character.name}</h2>
+        <div className="member-data">
         <p>
-          <strong className="title">Especie:</strong> {character.species}
+          <strong className="title">Species:</strong> {character.species}
         </p>
         <p>
-          <strong className="title">Género:</strong> {character.gender}
+          <strong className="title">Gender:</strong> {character.gender}
         </p>
         <p>
-          <strong className="title">Casa:</strong> {character.house}
+          <strong className="title">House:</strong> {character.house}
         </p>
+      
         <p>
-          <strong className="title">Fecha de Nacimiento:</strong> {character.dateOfBirth}
-        </p>
-        <p>
-          <strong className="title">Mago:</strong> {character.wizard ? "Sí" : "No"}
+          <strong className="title">Wizard:</strong> {character.wizard ? "Sí" : "No"}
         </p>
         <p>
           <strong className="title">Ancestry:</strong> {character.ancestry}
         </p>
-        <p>
-          <strong className="title">Color de Ojos:</strong> {character.eyeColour}
-        </p>
-        <p>
-          <strong className="title">Color de Cabello:</strong> {character.hairColour}
-        </p>
+        
         <p>
           <strong className="title">Patronus:</strong> {character.patronus}
         </p>
         <p>
-          <strong className="title">Estudiante de Hogwarts:</strong>{" "}
+          <strong className="title">Hogwarts student:</strong>{" "}
           {character.hogwartsStudent ? "Sí" : "No"}
         </p>
         <p>
-          <strong className="title">Staff de Hogwarts:</strong>{" "}
+          <strong className="title">Hogwarts staff:</strong>{" "}
           {character.hogwartsStaff ? "Sí" : "No"}
-        </p>
+        </p>      
+        <p>
+        <strong className="title">Alive:</strong> {character.alive ? <><img className="alive-icon" src={aliveIcon} alt="alive"/> Sí</> : <><img className="alive-icon" src={deadIcon} alt="dead"/> No</>}        
+        </p> 
         <p>
           <strong className="title">Actor:</strong> {character.actor}
         </p>
-        <p>
-        <strong className="title">Vivo:</strong> {character.alive ? <><img src={aliveIcon} alt="alive"/> Sí</> : <><img src={deadIcon} alt="dead"/> No</>}        
-        </p> 
+        </div>
       </div> 
     </div>
   );

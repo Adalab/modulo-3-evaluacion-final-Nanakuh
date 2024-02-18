@@ -1,5 +1,5 @@
 .character-detail {
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 20px;
   background-color:rgb(243, 209, 185);
@@ -44,9 +44,15 @@
 }
 
 .character-info h2 {
-  font-size: 26px;
+  font-size: 30px;
   margin-bottom: 10px;
-  color: #05646f
+  color: #05646f;
+  text-align: center;
+}
+.member-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+    
 }
 
 .character-info p {
@@ -61,11 +67,8 @@
 .title {
   color: #05646f;
   font-size: 18px;
-  
 }
 
-.character-info p:last-child {
-  margin-bottom: 0;
-}
+
 
 

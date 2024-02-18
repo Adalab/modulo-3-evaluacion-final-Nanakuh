@@ -6,7 +6,7 @@ function NameFilter({ handleFilterChange }) {
     <form>
       <input
         type="text"
-        placeholder="Filter by name..."
+        placeholder="Filter by character..."
         onChange={handleFilterChange}
         className="filter-input"
       />

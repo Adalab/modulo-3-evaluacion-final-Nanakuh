@@ -11,7 +11,7 @@ function Card({ id, image, name, species }) {
         <img src={image || defaultImage} alt={name} className="card-image" />
         <div className="card-info">
           <h2 className="card-name">{name}</h2>
-          <p className="card-species">Especie: {species}</p>
+          <p className="card-species">Specie: {species}</p>
         </div>
       </div>
     </Link>
