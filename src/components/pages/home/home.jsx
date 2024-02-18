@@ -41,7 +41,7 @@ function Home() {
     <div className="App">
       <Header />
       <div className="filter-section">
-        <NameFilter handleFilterChange={handleNameFilterChange} />
+        <NameFilter handleFilterChange={handleNameFilterChange} textFilter={textFilter} />
         <SelectFilter
           selectedHouse={houseFilter}
           onHouseChange={handleHouseFilterChange}

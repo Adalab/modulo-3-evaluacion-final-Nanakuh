@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import "./name-filter.css";
 
-function NameFilter({ handleFilterChange }) {
+function NameFilter({ handleFilterChange,textFilter }) {
   return (
     <form>
       <input
@@ -9,6 +9,7 @@ function NameFilter({ handleFilterChange }) {
         placeholder="Filter by character..."
         onChange={handleFilterChange}
         className="filter-input"
+        value={textFilter}
       />
     </form>
   );
@@ -16,6 +17,7 @@ function NameFilter({ handleFilterChange }) {
 
 NameFilter.propTypes = {
   handleFilterChange: PropTypes.func.isRequired,
+  textFilter: PropTypes.string.isRequired
 };
 
 export default NameFilter;
