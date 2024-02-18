@@ -16,6 +16,7 @@ function Home() {
       .then((response) => response.json())
 
       .then((dataResponse) => {
+        dataResponse.sort((a, b)=> a.name.localeCompare(b.name));
         setCharacters(dataResponse);
       })
       .catch((error) => console.error("Error fetching data: ", error));
@@ -23,7 +24,7 @@ function Home() {
 
   useEffect(() => {
     fetchCharacters();
-  }, [characters]);
+  }, [houseFilter]);
 
   const handleNameFilterChange = (e) => {
     setTextFilter(e.target.value.toLowerCase());
@@ -41,7 +42,10 @@ function Home() {
     <div className="App">
       <Header />
       <div className="filter-section">
-        <NameFilter handleFilterChange={handleNameFilterChange} textFilter={textFilter} />
+        <NameFilter
+          handleFilterChange={handleNameFilterChange}
+          textFilter={textFilter}
+        />
         <SelectFilter
           selectedHouse={houseFilter}
           onHouseChange={handleHouseFilterChange}
