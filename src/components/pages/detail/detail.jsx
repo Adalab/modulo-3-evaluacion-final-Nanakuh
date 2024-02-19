@@ -26,7 +26,9 @@ function Detail() {
 
   return (
     <div className="character-detail">
-      <Link to="/" className="return-button">BACK</Link>
+      <Link to="/" className="return-button">
+        BACK
+      </Link>
       <div className="character-header">
         <img
           src={`./${character.house}.jpg`}
@@ -42,42 +44,46 @@ function Detail() {
       <div className="character-info">
         <h2>{character.name}</h2>
         <div className="member-data">
-        <p>
-          <strong className="title">Species:</strong> {character.species}
-        </p>
-        <p>
-          <strong className="title">Gender:</strong> {character.gender}
-        </p>
-        <p>
-          <strong className="title">House:</strong> {character.house}
-        </p>
-      
-        <p>
-          <strong className="title">Wizard:</strong> {character.wizard ? "Sí" : "No"}
-        </p>
-        <p>
-          <strong className="title">Ancestry:</strong> {character.ancestry}
-        </p>
-        
-        <p>
-          <strong className="title">Patronus:</strong> {character.patronus}
-        </p>
-        <p>
-          <strong className="title">Hogwarts student:</strong>{" "}
-          {character.hogwartsStudent ? "Sí" : "No"}
-        </p>
-        <p>
-          <strong className="title">Hogwarts staff:</strong>{" "}
-          {character.hogwartsStaff ? "Sí" : "No"}
-        </p>      
-        <p>
-        <strong className="title">Alive:</strong> {character.alive ? <><img className="alive-icon" src={aliveIcon} alt="alive"/> Sí</> : <><img className="alive-icon" src={deadIcon} alt="dead"/> No</>}        
-        </p> 
-        <p>
-          <strong className="title">Actor:</strong> {character.actor}
-        </p>
+          <p>
+            <strong className="title">Species:</strong> {character.species}
+          </p>
+          <p>
+            <strong className="title">Gender:</strong> {character.gender}
+          </p>
+          <p>
+            <strong className="title">House:</strong> {character.house}
+          </p>
+
+          <p>
+            <strong className="title">Wizard:</strong>
+            {character.wizard ? "Yes" : "No"}
+          </p>
+          <p>
+            <strong className="title">Ancestry:</strong> {character.ancestry}
+          </p>
+
+          <p>
+            <strong className="title">Patronus:</strong> {character.patronus}
+          </p>
+          <p>
+            <strong className="title">Hogwarts student:</strong>
+            {character.hogwartsStudent ? "Yes" : "No"}
+          </p>
+          <p>
+            <strong className="title">Hogwarts staff:</strong>
+            {character.hogwartsStaff ? "Yes" : "No"}
+          </p>
+          <p>
+            <strong className="title">Alive:</strong>{character.alive ? <><img className="alive-icon" src={aliveIcon} alt="alive" /> Yes </> : <>
+                <img className="alive-icon" src={deadIcon} alt="dead" /> No
+              </>
+            }
+          </p>
+          <p>
+            <strong className="title">Actor:</strong> {character.actor}
+          </p>
         </div>
-      </div> 
+      </div>
     </div>
   );
 }

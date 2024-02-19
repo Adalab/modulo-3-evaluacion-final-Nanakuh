@@ -4,16 +4,16 @@ import "./select-filter.css";
 const SelectFilter = ({ selectedHouse, onHouseChange, houseFilter }) => {
   return (
    
-   <select
+   <select 
       defaultValue={selectedHouse}
       onChange={onHouseChange}
       className="house-filter"
       value={houseFilter}
     >
-      <option value="Gryffindor">Gryffindor</option>
-      <option value="Hufflepuff">Hufflepuff</option>
-      <option value="Ravenclaw">Ravenclaw</option>
-      <option value="Slytherin">Slytherin</option>
+      <option value="Gryffindor">GRIFFINDOR</option>
+      <option value="Hufflepuff">HUFFLEPUFF</option>
+      <option value="Ravenclaw">RAVENCLAW</option>
+      <option value="Slytherin">SLITHERIN</option>
     </select>
    
   );

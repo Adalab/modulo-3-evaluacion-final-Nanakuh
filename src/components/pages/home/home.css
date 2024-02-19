@@ -1,6 +1,7 @@
 .filter-section {
-  margin: 20px 0;
+  padding:10px;
   text-align: center;
+  background-color: rgb(150, 220, 220)
 }
 
 .filter-input {
@@ -15,6 +16,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: rgb(150, 220, 220)
 }
 
 .card {

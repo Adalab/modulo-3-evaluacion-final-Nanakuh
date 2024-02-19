@@ -24,7 +24,7 @@ function Home() {
 
   useEffect(() => {
     fetchCharacters();
-  }, [houseFilter]);
+  }, [characters]);
 
   const handleNameFilterChange = (e) => {
     setTextFilter(e.target.value.toLowerCase());

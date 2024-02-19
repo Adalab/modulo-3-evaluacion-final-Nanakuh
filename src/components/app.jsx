@@ -3,6 +3,7 @@ import Detail from "./pages/detail/detail";
 import Home from "./pages/home/home";
 
 function App() {
+  
   return (
     <Routes>
       <Route path="/" element={<Home/>} /> 
