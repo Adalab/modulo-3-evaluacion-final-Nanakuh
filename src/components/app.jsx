@@ -4,11 +4,14 @@ import Home from "./pages/home/home";
 import { useState } from "react";
 
 function App() {
-  const [textFilter] = useState("");
-  
+  const [textFilter, setTextFilter] = useState("");
+
+  const handleNameFilterChange = (e) => {
+    setTextFilter(e.target.value.toLowerCase());
+  };
   return (
     <Routes>
-      <Route path="/" element={<Home/>} textFilter={textFilter}/> 
+      <Route path="/" element={<Home textFilter={textFilter} handleNameFilterChange={handleNameFilterChange}/>}/> 
       <Route path="/character/:id" element={<Detail/>} />
     </Routes>
   );

@@ -5,10 +5,10 @@ import NameFilter from "../../name-filter/name-filter";
 import SelectFilter from "../../select-filter/select-filter";
 import Header from "../../header/header";
 import Footer from "../../footer/footer";
+import { PropTypes } from 'prop-types';
 
-function Home() {
+function Home({textFilter,handleNameFilterChange}) {
   const [characters, setCharacters] = useState([]);
-  const [textFilter, setTextFilter] = useState("");
   const [houseFilter, setHouseFilter] = useState("gryffindor");
 
   const fetchCharacters = () => {
@@ -26,9 +26,7 @@ function Home() {
     fetchCharacters();
   }, [characters]);
 
-  const handleNameFilterChange = (e) => {
-    setTextFilter(e.target.value.toLowerCase());
-  };
+
   const handleHouseFilterChange = (e) => {
     setHouseFilter(e.target.value.toLowerCase());
   };
@@ -73,6 +71,13 @@ function Home() {
       <Footer />
     </div>
   );
+  
 }
+
+
+Home.propTypes = {
+  handleNameFilterChange: PropTypes.func.isRequired,
+  textFilter: PropTypes.string.isRequired
+};
 
 export default Home;
